@@ -19,7 +19,7 @@ def main():
     mesa_atual = 1 # Simulando o cliente na mesa 1
 
     while True:
-        print(f"\n=== 🏠 {meu_restaurante.nome.upper()} ===")
+        print(f"\n=== {meu_restaurante.nome.upper()} ===")
         print("1. Ver Cardápio")
         print("2. Fazer um Pedido")
         print("3. Ver Conta Parcial")
@@ -45,14 +45,14 @@ def main():
                     pedido = meu_restaurante.abrir_pedido(mesa_atual)
                     pedido.adicionar_item(item_selecionado)
                 else:
-                    print("❌ Opção de item inválida.")
+                    print("Opção de item inválida.")
 
             elif opcao == "3":
                 pedido = meu_restaurante.obter_pedido(mesa_atual)
                 if pedido:
                     pedido.resumo()
                 else:
-                    print("❌ Você ainda não fez nenhum pedido para esta mesa.")
+                    print("Você ainda não fez nenhum pedido para esta mesa.")
 
             elif opcao == "4":
                 meu_restaurante.encerrar_pedido(mesa_atual)
@@ -64,12 +64,12 @@ def main():
                 break
             
             else:
-                print("❌ Opção inválida. Tente novamente.")
+                print(" Opção inválida. Tente novamente.")
                 
         except ValueError as ve:
-            print(f"❌ Erro de Entrada: Digite apenas números válidos. Detalhes: {ve}")
+            print(f"Erro de Entrada: Digite apenas números válidos. Detalhes: {ve}")
         except Exception as e:
-            print(f"❌ Erro inesperado no sistema: {e}")
+            print(f"Erro inesperado no sistema: {e}")
 
-if __name__ == "_main_":
+if __name__ == "__main__":
     main()
