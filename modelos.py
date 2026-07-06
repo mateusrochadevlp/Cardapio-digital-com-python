@@ -48,7 +48,7 @@ class Entrada(ItemBase):
         self.__serve_pessoas = serve_pessoas
 
     def exibir_detalhes(self) -> str:
-        return f":salad: [Entrada] {self.nome} - R$ {self.preco:.2f} (Serve {self.__serve_pessoas} pessoa(s))"
+        return f"[Entrada] {self.nome} - R$ {self.preco:.2f} (Serve {self.__serve_pessoas} pessoa(s))"
 
 
 class PratoPrincipal(ItemBase):
@@ -57,7 +57,7 @@ class PratoPrincipal(ItemBase):
         self.__tempo_preparo = tempo_preparo
 
     def exibir_detalhes(self) -> str:
-        return f":fork_knife_plate: [Prato] {self.nome} - R$ {self.preco:.2f} (Preparo: {self.__tempo_preparo} min)"
+        return f"[Prato] {self.nome} - R$ {self.preco:.2f} (Preparo: {self.__tempo_preparo} min)"
 
 
 class Bebida(ItemBase):
@@ -66,7 +66,7 @@ class Bebida(ItemBase):
         self.__volume_ml = volume_ml
 
     def exibir_detalhes(self) -> str:
-        return f":cup_with_straw: [Bebida] {self.nome} - R$ {self.preco:.2f} ({self.__volume_ml}ml)"
+        return f"[Bebida] {self.nome} - R$ {self.preco:.2f} ({self.__volume_ml}ml)"
 
 
 class Sobremesa(ItemBase):
@@ -76,4 +76,4 @@ class Sobremesa(ItemBase):
 
     def exibir_detalhes(self) -> str:
         lactose_info = "Contém Lactose" if self.__contem_lactose else "Zero Lactose"
-        return f":cake: [Sobremesa] {self.nome} - R$ {self.preco:.2f} ({lactose_info})"
+        return f"[Sobremesa] {self.nome} - R$ {self.preco:.2f} ({lactose_info})"
