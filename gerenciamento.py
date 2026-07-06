@@ -4,7 +4,7 @@ from modelos import ItemBase
 
 class Cardapio:
     """Classe que gerencia as coleções de itens do cardápio."""
-    def _init_(self):
+    def __init__(self):
         self.__acervo: Dict[str, List[ItemBase]] = {
             "Entradas": [],
             "Pratos": [],
@@ -19,7 +19,7 @@ class Cardapio:
 
     def exibir_cardapio(self) -> List[ItemBase]:
         todos_itens = []
-        print("\n--- 📖 CARDÁPIO ---")
+        print("\n--- CARDÁPIO ---")
         idx = 1
         for secao, itens in self.__acervo.items():
             if itens:
@@ -33,7 +33,7 @@ class Cardapio:
 
 class Pedido:
     """Demonstração de Agregação (Um pedido agrega objetos de ItemBase)."""
-    def _init_(self, numero_mesa: int):
+    def __init__(self, numero_mesa: int):
         self.__numero_mesa = numero_mesa
         self.__itens: List[ItemBase] = []  
 
@@ -43,13 +43,13 @@ class Pedido:
 
     def adicionar_item(self, item: ItemBase):
         self.__itens.append(item)
-        print(f"✅ '{item.nome}' adicionado ao pedido da Mesa {self.numero_mesa}.")
+        print(f"'{item.nome}' adicionado ao pedido da Mesa {self.numero_mesa}.")
 
     def calcular_total(self) -> float:
         return sum(item.preco for item in self.__itens)
 
     def resumo(self):
-        print(f"\n--- 📝 CONTA (Mesa {self.numero_mesa}) ---")
+        print(f"\n---  CONTA (Mesa {self.numero_mesa}) ---")
         if not self.__itens:
             print("Nenhum item no pedido.")
             return
@@ -61,7 +61,7 @@ class Pedido:
 
 class Restaurante:
     """Demonstração de Composição (Cardapio) e Associação (Pedido)."""
-    def _init_(self, nome: str):
+    def __init__(self, nome: str):
         self.nome = nome
         # Composição: O Cardápio é criado junto com o Restaurante
         self.__cardapio = Cardapio() 
@@ -84,6 +84,6 @@ class Restaurante:
         if mesa in self.__pedidos_ativos:
             pedido = self.__pedidos_ativos.pop(mesa)
             pedido.resumo()
-            print("💳 Pagamento realizado. Mesa liberada!")
+            print("Pagamento realizado. Mesa liberada!")
         else:
             raise ValueError(f"Erro: Nenhuma conta aberta para a mesa {mesa}.")
