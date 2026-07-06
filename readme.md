@@ -34,7 +34,7 @@ O objetivo deste sistema é automatizar e otimizar o fluxo de atendimento em mes
 ## 📐 Diagrama de Classes UML
 O diagrama de classes que mapeia a arquitetura estrutural do sistema, contendo todas as classes, atributos, métodos e os respectivos relacionamentos (herança, dependência, agregação e composição), encontra-se mapeado na pasta local de recursos do projeto:
 
-![Diagrama de Classes UML](imagens/diagrama.png)
+![Diagrama de Classes UML](./imagens/DiagramaUML.png)
 
 *(Certifique-se de salvar a imagem do seu diagrama com o nome `diagrama.png` dentro de uma pasta chamada `imagens` na raiz do projeto para que ela seja renderizada corretamente no GitHub).*
 
