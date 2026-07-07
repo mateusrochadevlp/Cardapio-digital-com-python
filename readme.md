@@ -36,8 +36,6 @@ O diagrama de classes que mapeia a arquitetura estrutural do sistema, contendo t
 
 ![Diagrama de Classes UML](./imagens/DiagramaUML.png)
 
-*(Certifique-se de salvar a imagem do seu diagrama com o nome `diagrama.png` dentro de uma pasta chamada `imagens` na raiz do projeto para que ela seja renderizada corretamente no GitHub).*
-
 ---
 
 ## 💻 Explicação dos Conceitos de POO Utilizados
@@ -75,30 +73,33 @@ O projeto foi inteiramente edificado seguindo as melhores práticas da Programa�
 ### Pré-requisitos
 Certifique-se de possuir o Python 3.8 ou superior instalado em sua máquina local. Você pode checar a instalação utilizando o comando:
 
-    bash
+```bash
     #Para Linux ou Mac
     python3 --version
 
     #Para Windows
     python3 --version
+```
 
 Após verificação correta do Python, faça a clonagem do repositório, da seguinte maneira:
 
-    bash
+```bash
     #Abra seu terminar e acesse o diretório de sua escolha:
     @user: ~/Documentos
+```
 
 E então clone o repositório:
-    bash
-    
+
+```bash 
     @user: ~/Documentos: git clone [link-do-repositorio]
-    
+```
 
 Acesse o diretório do projeto:
-    bash
-    
-    @user: ~/Documentos/[link-do-repositorio]: cd [nome-do-repositorio]
 
+```bash
+    
+    @user: ~/Documentos: cd [nome-do-repositorio]
+    @user: ~/Documentos: cd [nome-do-repositorio]
     #Execute o arquivo principal:
     python3 main.py (ou o nome do arquivo principal)
-    
+```
